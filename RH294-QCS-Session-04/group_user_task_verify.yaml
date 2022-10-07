@@ -1,0 +1,35 @@
+---
+- name: Play-1st - Group and User management.
+  hosts: dev
+  tasks:
+     - name: Group Creation - unixadm 
+       group:
+          name: unixadm 
+          state: present 
+
+     - name: Group Creation - dbadm 
+       group:
+          name: dbadm 
+          state: present 
+
+     - name: Add the user 'john-02' with a specific uid and a primary group of 'unixadm'
+       user:
+         name: john-02
+         comment: John Doe
+         uid: 1040
+         group: unixadm
+
+     - name: Add the user 'mac-02' with a specific uid and a primary group of 'dbadm'
+       user:
+         name: mac-02
+         comment: Mac Doe
+         uid: 1041
+         group: dbadm
+- name: Play-2nd- verify users and groups.
+  hosts: dev
+  become: false 
+  tasks:
+     - name: Verify the user detail
+       shell: "id john-02 ; id mac-02"
+       when: false
+...

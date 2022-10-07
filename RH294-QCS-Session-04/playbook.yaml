@@ -1,0 +1,14 @@
+---
+- name: play-01 - processing 
+  hosts: dev
+  tasks:
+    - name: Display the message - task-01 
+      debug:
+        msg: "This is my task - task-01"
+    - name: Display the message - task-02
+      debug:
+        msg: "This is my task - task-02"
+    - name: Display the message - task-03 
+      debug:
+        msg: "This is my task - task-03"
+...

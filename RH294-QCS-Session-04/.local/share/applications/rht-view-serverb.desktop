@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=VM serverb Console
+GenericName=VM serverb Console
+X-GNOME-FullName=VM serverb Console
+Exec=rht-vmview --gui viewstart serverb
+Terminal=false
+Icon=virt-viewer
+Type=Application
+StartupNotify=true
+Categories=GTK;GNOME;Education;
+Name[en_US]=VM serverb Console

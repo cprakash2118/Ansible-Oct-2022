@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=VM classroom Console
+GenericName=VM classroom Console
+X-GNOME-FullName=VM classroom Console
+Exec=rht-vmview --gui viewstart classroom
+Terminal=false
+Icon=virt-viewer
+Type=Application
+StartupNotify=true
+Categories=GTK;GNOME;Education;
+Name[en_US]=VM classroom Console
